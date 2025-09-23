@@ -12,6 +12,9 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: Print GITHUB_ACTION_PATH
+      shell: bash
+      run: "echo \"GITHUB_ACTION_PATH is: $GITHUB_ACTION_PATH\""
     - name: Compile Java
       shell: bash
       run: javac $GITHUB_ACTION_PATH/HelloAction.java
