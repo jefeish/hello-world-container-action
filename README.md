@@ -9,6 +9,7 @@
 ```sh
 ./gradlew build
 ./gradlew test
+java -cp build/classes/java/main Action
 ```
 
 ---
@@ -18,4 +19,5 @@
 ```sh
 mvn clean install
 mvn test
+java -cp target/classes Action
 ```
