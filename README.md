@@ -1,1 +1,21 @@
 # hello-world-container-action
+
+## Local Build and Test
+
+### Gradle
+
+> **Best Practice:** Commit the Gradle wrapper files (`gradlew`, `gradlew.bat`, and the `gradle/wrapper` directory) to your repository. This ensures all users build with a consistent Gradle version and do not need Gradle pre-installed.
+
+```sh
+./gradlew build
+./gradlew test
+```
+
+---
+
+### Maven
+
+```sh
+mvn clean install
+mvn test
+```
