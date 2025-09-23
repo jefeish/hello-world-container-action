@@ -1,0 +1,10 @@
+name: "Hello Java Action"
+description: "A simple Java-based GitHub Action"
+inputs:
+  name:
+    description: "Who to greet"
+    required: false
+    default: "World"
+runs:
+  using: "docker"
+  image: "Dockerfile"
