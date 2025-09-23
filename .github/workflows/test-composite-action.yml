@@ -1,0 +1,19 @@
+name: Test Java Composite Action
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  run-java-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Java action
+        id: hello
+        uses: ./.github/actions/hello-java-composite
+        with:
+          name: "GitHub"
+
+      - name: Show output
+        run: "echo \"The action said: ${{ steps.hello.outputs.greeting }}\""

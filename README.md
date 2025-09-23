@@ -1,4 +1,4 @@
-# hello-world-container-action
+# hello-world-container-HelloAction
 
 ## Local Build and Test
 
@@ -9,7 +9,7 @@
 ```sh
 ./gradlew build
 ./gradlew test
-java -cp build/classes/java/main Action
+java -cp build/classes/java/main HelloAction
 ```
 
 ---
@@ -19,5 +19,5 @@ java -cp build/classes/java/main Action
 ```sh
 mvn clean install
 mvn test
-java -cp target/classes Action
+java -cp target/classes HelloAction
 ```

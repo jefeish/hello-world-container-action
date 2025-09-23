@@ -1,0 +1,26 @@
+name: "Hello Java Action (composite)"
+description: "A simple Java-based GitHub Action without Docker"
+inputs:
+  name:
+    description: "Who to greet"
+    required: false
+    default: "World"
+outputs:
+  greeting:
+    description: "The generated greeting"
+    value: ${{ steps.run-java.outputs.greeting }}
+runs:
+  using: "composite"
+  steps:
+    - name: Install JDK
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-17-jdk
+    - name: Compile Java
+      shell: bash
+      run: javac $GITHUB_ACTION_PATH/HelloActionComposite.java
+    - name: Run Java program
+      id: run-java
+      shell: bash
+      run: java -cp $GITHUB_ACTION_PATH HelloActionComposite

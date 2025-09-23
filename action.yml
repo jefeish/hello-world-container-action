@@ -1,5 +1,0 @@
-name: 'Hello Java Container Action'
-description: 'Runs a Java program in a container'
-runs:
-  using: docker
-  image: Dockerfile

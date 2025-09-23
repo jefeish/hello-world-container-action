@@ -1,9 +1,15 @@
 name: Test Java Container Action
+
 on: 
   workflow_dispatch:
+
 jobs:
   run-java-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./ # Uses the local action in the repo
+
+      - name: Run custom Java action
+        uses: ./.github/actions/hello-java-container
+        with:
+          name: "GitHub"
