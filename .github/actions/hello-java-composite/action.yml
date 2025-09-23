@@ -14,8 +14,8 @@ runs:
   steps:
     - name: Compile Java
       shell: bash
-      run: javac $GITHUB_ACTION_PATH/HelloActionComposite.java
+      run: javac $GITHUB_ACTION_PATH/HelloAction.java
     - name: Run Java program
       id: run-java
       shell: bash
-      run: java -cp $GITHUB_ACTION_PATH HelloActionComposite
+      run: java -cp $GITHUB_ACTION_PATH HelloAction
