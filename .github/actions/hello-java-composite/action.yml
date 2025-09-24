@@ -19,3 +19,5 @@ runs:
       id: run-java
       shell: bash
       run: java -cp $GITHUB_WORKSPACE/src/main/java HelloAction
+      env:
+        INPUT_NAME: ${{ inputs.name }}
