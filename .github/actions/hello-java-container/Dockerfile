@@ -1,4 +1,6 @@
+# Use Java JDK base image
 FROM eclipse-temurin:17-jdk
-COPY . /HelloAction.java
-RUN javac /HelloAction.java
-ENTRYPOINT ["java", "-cp", "/", "HelloAction"]
+COPY $GITHUB_WORKSPACE /workspace
+WORKDIR /workspace
+RUN javac src/main/java/HelloAction.java
+ENTRYPOINT ["bash", "-c", "java -cp src/main/java HelloAction"]
