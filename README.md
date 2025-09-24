@@ -1,4 +1,5 @@
-# hello-world-container-HelloAction
+# 'hello-world' Java Action
+
 This project is a sample of GitHub Actions using Java, supporting both container-based and composite action approaches. 
 
 It includes:
