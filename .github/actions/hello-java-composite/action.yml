@@ -4,7 +4,7 @@ inputs:
   name:
     description: "Who to greet"
     required: false
-    default: "World"
+    default: "Mona"
 outputs:
   greeting:
     description: "The generated greeting"
